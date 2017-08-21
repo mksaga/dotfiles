@@ -4,7 +4,7 @@ filetype plugin indent on
 syntax on
 set encoding=utf-8
 set number
-set guifont=Fira\ Code:h15
+set guifont=SF\ Mono:h15
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
