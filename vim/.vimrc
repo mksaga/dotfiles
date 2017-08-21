@@ -16,13 +16,14 @@ call vundle#begin()
 "
 " " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-"
+Plugin 'gabrielelana/vim-markdown'
+
 " " The following are examples of different formats supported.
 " " Keep Plugin commands between vundle#begin/end.
 " " plugin on GitHub repo
 " Plugin 'tpope/vim-fugitive'
 "
-Plugin 'gabrielelana/vim-markdown'
+
 " " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
