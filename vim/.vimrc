@@ -1,6 +1,5 @@
 inoremap jk <ESC>
 let mapleader = "\<Space>"
-filetype plugin indent on
 syntax on
 set encoding=utf-8
 set number
@@ -26,6 +25,8 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'gabrielelana/vim-markdown'
 " " All of your Plugins must be added before the following line
 call vundle#end()            " required
+
+filetype plugin indent on
 
 " " Brief help
 " " :PluginList       - lists configured plugins
