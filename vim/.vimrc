@@ -1,9 +1,10 @@
-inoremap jk <ESC>
+inoremap vv <c-o>:w<cr>
+inoremap jk <ESC> 
 let mapleader = "\<Space>"
 syntax on
 set encoding=utf-8
 set number
-set guifont=SF\ Mono:h15
+set guifont=SF\ Mono:h17
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
