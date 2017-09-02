@@ -9,7 +9,7 @@ source ~/.git-completion.bash
 # Personal Aliases
 alias lsa="ls -a"
 alias cdr="cd ~/Documents/repos"
-
+alias cdp="cd ~/Documents/repos/portfolio/mksaga.github.io"
 
 # added by Anaconda3 4.4.0 installer
 export PATH="/Users/mohamed/anaconda/bin:$PATH"
