@@ -6,8 +6,15 @@ set encoding=utf-8
 set number
 set guifont=SF\ Mono:h17
 
+" to open NerdTree at launch
+autocmd vimenter * NERDTree
+
+" colorscheme wombat
+
 set nocompatible              " be iMproved, required
 filetype off                  " required
+
+set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -18,6 +25,9 @@ call vundle#begin()
 " " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'gabrielelana/vim-markdown'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'scrooloose/syntastic'
+Plugin 'kien/ctrlp'
 
 " " The following are examples of different formats supported.
 " " Keep Plugin commands between vundle#begin/end.
