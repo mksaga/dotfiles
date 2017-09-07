@@ -1,5 +1,8 @@
 inoremap vv <c-o>:w<cr>
 inoremap jk <ESC> 
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+
 let mapleader = "\<Space>"
 syntax on
 set encoding=utf-8
@@ -28,7 +31,7 @@ Plugin 'gabrielelana/vim-markdown'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'scrooloose/syntastic'
 Plugin 'kien/ctrlp'
-
+Plugin 'scrooloose/nerdtree'
 " " The following are examples of different formats supported.
 " " Keep Plugin commands between vundle#begin/end.
 " " plugin on GitHub repo

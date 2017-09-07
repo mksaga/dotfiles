@@ -1,3 +1,4 @@
+export PATH=/usr/local/bin:$PATH
 # Git configuration
 # Branch name in prompt
 source ~/.git-prompt.sh
