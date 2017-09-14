@@ -14,6 +14,7 @@ alias cdp="cd ~/Documents/repos/portfolio/mksaga.github.io"
 alias lsg='ls -G'
 alias lsag='ls -aG'
 alias jsr="jekyll serve"
+alias cdpenn="cd ~/Documents/Penn"
 
 # added by Anaconda3 4.4.0 installer
 export PATH="/Users/mohamed/anaconda/bin:$PATH"
