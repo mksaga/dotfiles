@@ -10,7 +10,7 @@ source ~/.git-completion.bash
 # Personal Aliases
 alias lsa="ls -a"
 alias cdr="cd ~/Documents/repos"
-alias cdp="cd ~/Documents/repos/portfolio/mksaga.github.io"
+alias cdp="cd ~/Documents/repos/portfolio/portfolio\ site.io"
 alias lsg='ls -G'
 alias lsag='ls -aG'
 alias jsr="jekyll serve"
