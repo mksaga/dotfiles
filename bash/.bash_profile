@@ -16,6 +16,7 @@ alias lsag='ls -aG'
 alias jsr="jekyll serve"
 alias cdpenn="cd ~/Documents/Penn"
 alias cvrfrsh="cp ~/Documents/repos/aesthetic-cv/mohamed.pdf ~/Documents/repos/portfolio/portfolio\ site.io/assets/pdf/mohamed.pdf"
+alias cdr="cd ~/Documents/repos"
 # added by Anaconda3 4.4.0 installer
 export PATH="/Users/mohamed/anaconda/bin:$PATH"
 
