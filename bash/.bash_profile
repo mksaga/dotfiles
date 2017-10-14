@@ -14,6 +14,7 @@ alias cdp="cd ~/Documents/repos/portfolio/portfolio\ site.io"
 alias lsg='ls -G'
 alias lsag='ls -aG'
 alias jsr="jekyll serve"
+alias bejs="bundle exec jekyll serve"
 alias cdpenn="cd ~/Documents/Penn"
 alias cvrfrsh="cp ~/Documents/repos/aesthetic-cv/mohamed.pdf ~/Documents/repos/portfolio/portfolio\ site.io/assets/pdf/mohamed.pdf"
 alias cdr="cd ~/Documents/repos"
