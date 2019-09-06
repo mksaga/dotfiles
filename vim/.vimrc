@@ -1,55 +1,74 @@
 inoremap vv <c-o>:w<cr>
-inoremap jk <ESC> 
+inoremap jk <ESC>
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
+nnoremap <C-k> <C-w>k
+nnoremap <C-j> <C-w>j
 
-let mapleader = "\<Space>"
+" let mapleader = "\<Space>"
 syntax on
 set encoding=utf-8
+
+" LINE NUMBER
 set number
-set guifont=SF\ Mono:h17
 
-" to open NerdTree at launch
-autocmd vimenter * NERDTree
+" indentation
+set autoindent
+set cindent
+set shiftwidth=4
+set smartindent
+set smarttab
+set tabstop=4
+set expandtab
 
-" colorscheme wombat
+filetype plugin on
+filetype indent on
 
-set nocompatible              " be iMproved, required
-filetype off                  " required
+" key response
+set ttimeout
+set ttimeoutlen=50
 
-set runtimepath^=~/.vim/bundle/ctrlp.vim
+" display incomplete commands
+set showcmd
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" " alternatively, pass a path where Vundle should install plugins
-" "call vundle#begin('~/some/path/here')
-"
-" " let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'gabrielelana/vim-markdown'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'scrooloose/syntastic'
-Plugin 'kien/ctrlp'
-Plugin 'scrooloose/nerdtree'
-" " The following are examples of different formats supported.
-" " Keep Plugin commands between vundle#begin/end.
-" " plugin on GitHub repo
-" Plugin 'tpope/vim-fugitive'
-"
+" highlight search
+set hlsearch
 
-" " All of your Plugins must be added before the following line
-call vundle#end()            " required
+if (has("termguicolors"))
+  set termguicolors
+endif
 
-filetype plugin indent on
+" PLUGINS
 
-" " Brief help
-" " :PluginList       - lists configured plugins
-" " :PluginInstall    - installs plugins; append `!` to update or just
-" :PluginUpdate
-" " :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" " :PluginClean      - confirms removal of unused plugins; append `!` to
-" auto-approve removal
-" "
-" " see :h vundle for more details or wiki for FAQ
-" " Put your non-Plugin stuff after this line
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+call plug#begin()
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
+
+    Plug 'sheerun/vim-polyglot'
+
+    Plug 'flazz/vim-colorschemes'
+call plug#end()
+
+"Setting the colorscheme
+if &t_Co >= 256 || has("gui_running")
+    set background=dark
+    if !empty(glob('~/.vim/plugged/vim-colorschemes/'))
+        colorscheme gruvbox
+    endif
+endif
+if &t_Co > 2 || has("gui_running")
+    "switch syntax highlighting on, when the terminal has colors
+    syntax on
+endif
+
+"Airline
+let g:airline_powerline_fonts = 0
+let g:airline#extensions#tabline#formatter='unique_tail_improved'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='deus'
